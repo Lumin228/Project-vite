@@ -1,3 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: font-family: "Inter Tight", sans-serif;
+  background: #1c1d20;
+  color: #fafafa;
+}
+
 h1,
 h2,
 h3,
@@ -31,4 +41,8 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+button {
+  border: none;
 }
