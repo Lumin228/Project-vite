@@ -123,36 +123,35 @@ img{
 /* ----------------SWIPEEEEEEER------------ */
 
 
-.skills-slider {
+.about-me-skills-slider {
     margin-top: 96px;
 }
 
-.swiper {
+.about-me-swiper {
     width: 100%;
     overflow: hidden;
     
 }
 
-.swiper-wrapper {
+.about-me-swiper-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     
 }
 
-.swiper-slide{
+.about-me-swiper-slide{
     border-radius: 100%;
     border: 1px solid rgba(250, 250, 250, 0.2);
     width: 200px;
     height: 200px;
-  
 
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.skill {
+.about-me-skill {
     font-weight: 500;
     font-size: 20px;
     letter-spacing: -0.02em;
@@ -160,13 +159,6 @@ img{
 }
 
 
-.about-swiper-next .icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-}
 
 /* .skill.active {
     background: red;
