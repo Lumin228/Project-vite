@@ -1,11 +1,5 @@
-.about-me{
-    font-family: "Inter Tight", sans-serif;
-    background-color: #1c1d20;
-    color: #fafafa;
-}
-button {
-    border: none;
-  }
+
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -23,8 +17,6 @@ button {
 .about-container {
     display: flex;
     gap: 16px;
-    align-items: center;
-    /* flex-wrap: wrap; */
     flex-direction: column;
 }
 
@@ -70,21 +62,9 @@ img{
 .accordion-item {
     border-bottom: 1px solid rgba(250, 250, 250, 0.2);
     max-width: 343px;
-    padding-top: 20px;
-    padding-bottom: 44px;
 }
 
 .accordion-header {
-    /* width: 100%;
-    text-align: left;
-   
-    border: none;
-    color: white;
-    padding: 15px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: 0.3s; */
-
     font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
@@ -92,18 +72,40 @@ img{
     text-transform: uppercase;
     color: rgba(250, 250, 250, 0.4);
     background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 32px;
+}
+
+.accordion-header .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    width: 40px;
+    height: 40px;
+}
+
+.accordion-item.active .icon svg {
+    transform: rotate(180deg);
+    transition: transform 0.5s ease;
 }
 
 .accordion-content {
     display: none;
     padding-top: 12px;
-    padding-bottom: 20px;
- 
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: -0.02em;
     color: #fafafa;
-}
+    }
+
+
+
 
 .accordion-item.active .accordion-content {
     display: block;
@@ -141,7 +143,7 @@ img{
 
 
 
-  @media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     .about-text{
         font-size: 38px;
         line-height: 1.05;
@@ -155,14 +157,15 @@ img{
         max-height: 700px;
     }
     .accordion-item {
-        padding-top: 32px;
-        padding-bottom: 48px;
         max-width: 704px;
     }
+    .accordion-header{
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
     
-  }
-  
-  @media only screen and (min-width: 1440px) {
+}
+@media only screen and (min-width: 1440px) {
     .about-text-box {
         max-width: 680px;
     }
@@ -177,7 +180,6 @@ img{
     .accordion-content {
         display: none;
         padding-top: 12px;
-        padding-bottom: 20px;
         padding-left: 696px;
         text-align: left;
         font-size: 16px;
@@ -186,4 +188,4 @@ img{
         color: #fafafa;
 
     }
-  }
+}
