@@ -57,9 +57,10 @@ getReviews()
 
 // !=====================================================
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.reviews-swiper', {
   slidesPerView: 1,
   spaceBetween: 16,
+  autoHeight: false,
   modules: [Navigation, Pagination],
   // Responsive breakpoints
   breakpoints: {
@@ -78,7 +79,15 @@ const swiper = new Swiper('.swiper', {
     nextEl: '.swiper-btn-next',
     prevEl: '.swiper-btn-prev',
   },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
 });
-const swiperr = document.querySelector('.swiper').swiper;
+const swiperr = document.querySelector('.reviews-swiper').swiper;
 
 swiperr.slideNext();
+
+// const slides = document.querySelectorAll('.swiper-slide');
+// const maxHeight = Math.max(...Array.from(slides, s => s.clientHeight));
+// slides.forEach(slide => (slide.style.height = `${maxHeight}px`));
