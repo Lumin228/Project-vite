@@ -1,8 +1,10 @@
 import Accordion from "accordion-js";
 import "accordion-js/dist/accordion.min.css";
 
-// import Swiper from 'swiper';
-// import 'swiper/css';
+import Swiper from 'swiper';
+import 'swiper/css';
+
+
 
 
 document.querySelectorAll('.accordion-header').forEach(button => {
@@ -21,16 +23,16 @@ document.querySelectorAll('.accordion-header').forEach(button => {
 });
 
 
-// const swiper = new Swiper('.swiper', {
-//     slidesPerView: 'auto',
-//     loop: true,
-//     spaceBetween: 10,
-//     keyboard: {
-//         enabled: true,
-//         onlyInViewport: false,
-//     },
-//     navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//     },
-// });
+const swiper = new Swiper('.about-me-swiper', {
+    slidesPerView: 'auto',
+    loop: true,
+    spaceBetween: 10,
+    keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+    },
+    navigation: {
+        nextEl: '.about-me-swiper-next',
+    },
+});
+
