@@ -24,6 +24,8 @@
     border-radius: 24px;
     max-width: 343px;
     max-height: 500px;
+    /* width: 100%; */
+    
     background-color: #242527;
     
 }
@@ -53,6 +55,9 @@
 
 img{
     border-radius: 24px;
+    /* width: 100%; */
+    height: auto;
+
 }
 
 .accordion {
@@ -62,6 +67,7 @@ img{
 .accordion-item {
     border-bottom: 1px solid rgba(250, 250, 250, 0.2);
     max-width: 343px;
+    /* width: 100%; */
 }
 
 .accordion-header {
@@ -89,6 +95,9 @@ img{
     width: 40px;
     height: 40px;
 }
+.accordion-header .icon:hover{
+    background-color: rgba(250, 250, 250, 0.2);
+}
 
 .accordion-item.active .icon svg {
     transform: rotate(180deg);
@@ -98,6 +107,7 @@ img{
 .accordion-content {
     display: none;
     padding-top: 12px;
+    padding-bottom: 32px;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: -0.02em;
@@ -110,32 +120,45 @@ img{
 .accordion-item.active .accordion-content {
     display: block;
 }
+/* ----------------SWIPEEEEEEER------------ */
 
-.skills-slider {
-    margin-top: 30px;
+
+.about-me-skills-slider {
+    margin-top: 96px;
 }
 
-.swiper {
+.about-me-swiper {
     width: 100%;
     overflow: hidden;
+    
 }
 
-.swiper-slide {
+.about-me-swiper-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
-.skill {
-    max-width: 200px;
-    max-height: 200px;
+.about-me-swiper-slide{
     border-radius: 100%;
-    background-color: #ed3b44;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    width: 200px;
+    height: 200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-me-skill {
     font-weight: 500;
     font-size: 20px;
     letter-spacing: -0.02em;
     color: #fafafa;
 }
+
+
 
 /* .skill.active {
     background: red;
@@ -153,11 +176,14 @@ img{
         padding-left: 64px;
     }
     .about-text-box{
-        max-width: 704px;
+        max-width: 704px; 
         max-height: 700px;
+        /* width: 100%; */
     }
     .accordion-item {
         max-width: 704px;
+        width: 100%;
+    
     }
     .accordion-header{
         padding-top: 32px;
@@ -168,6 +194,7 @@ img{
 @media only screen and (min-width: 1440px) {
     .about-text-box {
         max-width: 680px;
+        /* width: 100%; */
     }
     .about-container {
         
@@ -175,6 +202,7 @@ img{
     }
     .accordion-item {
         max-width: 1376px;
+        /* width: 100%; */
     }
 
     .accordion-content {
