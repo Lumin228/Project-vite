@@ -24,7 +24,10 @@
     border-radius: 24px;
     max-width: 343px;
     max-height: 500px;
+    /* width: 100%; */
+    
     background-color: #242527;
+    
 }
 
 .about-text{
@@ -52,7 +55,9 @@
 
 img{
     border-radius: 24px;
+    /* width: 100%; */
     height: auto;
+
 }
 
 .accordion {
@@ -62,6 +67,7 @@ img{
 .accordion-item {
     border-bottom: 1px solid rgba(250, 250, 250, 0.2);
     max-width: 343px;
+    /* width: 100%; */
 }
 
 .accordion-header {
@@ -76,7 +82,8 @@ img{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 20px 0 32px 0;
+    padding-top: 20px;
+    padding-bottom: 32px;
 }
 
 .accordion-header .icon {
@@ -87,11 +94,9 @@ img{
     border: 1px solid rgba(250, 250, 250, 0.2);
     width: 40px;
     height: 40px;
-    transition: transform 0.3s ease, stroke 0.3s ease;
 }
 .accordion-header .icon:hover{
     background-color: rgba(250, 250, 250, 0.2);
-    transform: scale(1.2);
 }
 
 .accordion-item.active .icon svg {
@@ -101,21 +106,13 @@ img{
 
 .accordion-content {
     display: none;
+    padding-top: 12px;
     padding-bottom: 32px;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: -0.02em;
     color: #fafafa;
-}
-
-
-
-.about-me-text{
-    margin-bottom: 32px;
-}
-.about-me-role{
-    margin-bottom: 10px;
-}
+    }
 
 
 
@@ -128,9 +125,6 @@ img{
 
 .about-me-skills-slider {
     margin-top: 96px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .about-me-swiper {
@@ -139,28 +133,22 @@ img{
     
 }
 
-.about-me-swiper-list{
+.about-me-swiper-wrapper {
     display: flex;
+    justify-content: center;
     align-items: center;
+    
 }
-
 
 .about-me-swiper-slide{
     border-radius: 100%;
     border: 1px solid rgba(250, 250, 250, 0.2);
-    width: 130px;
-    height: 130px;
+    width: 200px;
+    height: 200px;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
-}
-
-
-
-.about-me-swiper-slide.active{
-    background-color: #ed3b44;
 }
 
 .about-me-skill {
@@ -171,22 +159,10 @@ img{
 }
 
 
-.about-me-swiper-next{
-    background-color: transparent;
-    padding: 10px 32px;
-}
-.about-icon-swiper{
-    stroke:#3b3b3b ;
-    fill:none;
-    transition: transform 0.3s ease, stroke 0.3s ease;
-}
 
-
-.about-icon-swiper:hover{
-    stroke:white;
-    transform: scale(1.2);
-}
-
+/* .skill.active {
+    background: red;
+} */
 
 
 
@@ -202,6 +178,7 @@ img{
     .about-text-box{
         max-width: 704px; 
         max-height: 700px;
+        /* width: 100%; */
     }
     .accordion-item {
         max-width: 704px;
@@ -212,23 +189,12 @@ img{
         padding-top: 32px;
         padding-bottom: 32px;
     }
-    .about-me-text{
-        margin-bottom: 16px;
-    }
-
-    .about-me-swiper-slide{
-        width: 200px;
-        height: 200px;
-    }
-    .about-icon-swiper{
-        width: 40px;
-        height: 40px;
-
-    }
+    
 }
 @media only screen and (min-width: 1440px) {
     .about-text-box {
         max-width: 680px;
+        /* width: 100%; */
     }
     .about-container {
         
@@ -236,13 +202,18 @@ img{
     }
     .accordion-item {
         max-width: 1376px;
+        /* width: 100%; */
     }
 
     .accordion-content {
+        display: none;
+        padding-top: 12px;
         padding-left: 696px;
         text-align: left;
-    }
-    .about-me-text{
-        margin-bottom: 32px;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: -0.02em;
+        color: #fafafa;
+
     }
 }
