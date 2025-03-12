@@ -1,0 +1,120 @@
+.hero {
+    height: 812px;
+    width: 100%;
+    background: linear-gradient(270deg, #1c1d20 49.68%, #69292d 67.73%, #ed3b44 100%);
+    
+    position: relative;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%; /* Полосатый градиент только на левой половине */
+    height: 100%;
+    background: repeating-linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.2) 1%, 
+            rgba(0, 0, 0, 0.1) 1%,  
+            rgba(0, 0, 0, 0) 12%
+        );
+}
+.hero-circle{
+    font-family: "Inter Tight";
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    padding: 18px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-mail{
+    display: flex;
+    gap: 8px;
+    margin-top: 187px;
+}
+
+  .hero-zag{
+    font-family: var(--font-family);
+font-weight: 500;
+font-size: 50px;
+line-height: 100%;
+letter-spacing: -0.03em;
+text-transform: uppercase;
+color: var(--main-text);
+display: flex;
+justify-content:space-around;
+}
+  /* Styles for Tablet devices */
+  @media only screen and (min-width: 768px) {
+    .hero {
+        height: 1024px;
+    }
+    .hero::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%; /* Полосатый градиент только на левой половине */
+        height: 100%;
+        background: repeating-linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.2) 1%, 
+                rgba(0, 0, 0, 0.1) 1%,  
+                rgba(0, 0, 0, 0) 12%
+            );
+    }
+    .hero-zag{
+        margin-top: 300px;
+        font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 90px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: var(--main-text);
+    display: flex;
+    justify-content:space-around;
+    }
+  }
+  /* Styles for Desktop devices */
+  @media only screen and (min-width: 1440px) {
+    .hero {
+     
+      height: 900px;
+    }
+    .hero::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%; /* Полосатый градиент только на левой половине */
+        height: 100%;
+        background: repeating-linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.2) 1%, 
+                rgba(0, 0, 0, 0.1) 1%,  
+                rgba(0, 0, 0, 0) 12%
+            );
+    }
+    .hero-zag{
+        margin-top: 200px;
+        font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 90px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: var(--main-text);
+    display: flex;
+    justify-content:space-around;
+    }
+  }
+
+
+
