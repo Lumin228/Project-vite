@@ -17,8 +17,7 @@
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
   padding: 32px 24px;
-  width: 332px;
-  height: 350px;
+  width: 344px;
   overflow: hidden;
   clip-path: inset(0 round 20px);
 }
@@ -75,6 +74,8 @@
   stroke-width: 0;
   stroke: currentColor;
   fill: none;
+  width: 24px;
+  height: 24px;
 }
 .reviews-arrows-btn-wrapper {
   display: flex;
@@ -106,4 +107,30 @@
   letter-spacing: -0.02em;
   color: #fafafa;
   margin-bottom: 8px;
+}
+@media screen and (min-width: 768px) {
+  .arrow {
+    width: 32px;
+    height: 32px;
+  }
+  .swiper-btn-prev {
+    padding: 18px;
+    width: 68px;
+    height: 68px;
+  }
+  .swiper-btn-next {
+    padding: 18px;
+    width: 68px;
+    height: 68px;
+  }
+  .reviews-arrows-btn-wrapper {
+    width: 156px;
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .reviews-item {
+    width: 332px;
+  }
 }

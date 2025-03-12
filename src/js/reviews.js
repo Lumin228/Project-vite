@@ -13,7 +13,7 @@ const reviewRefs = {
 export async function getReviews() {
   try {
     const res = await axios.get(
-      'https://portfolio-js.b.goit.study/api/reviews-inv'
+      'https://portfolio-js.b.goit.study/api/reviews'
     );
     console.log(res);
     console.log(res.data);
@@ -103,8 +103,8 @@ const swiper = new Swiper('.reviews-swiper', {
     },
   },
   navigation: {
-    nextEl: '.swiper-btn-next',
-    prevEl: '.swiper-btn-prev',
+    nextEl: '.reviews-swiper-next',
+    prevEl: '.reviews-swiper-prev',
   },
   keyboard: {
     enabled: true,
