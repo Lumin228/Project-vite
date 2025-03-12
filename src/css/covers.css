@@ -95,7 +95,6 @@ body {
 }
 
 .covers {
-  /* background-color: lightgray; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,7 +106,8 @@ body {
   z-index: 1;
   background: url('../img/covers/elements_vectors_.png') no-repeat center;
   background-size: cover;
-  height: 150vh;
+  /* height: 150vh; */
+  height: auto;
 }
 
 .marquee {
