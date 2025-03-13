@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
         grabCursor: true,
         simulateTouch: true,
         slidesPerGroup: 1,
-        centeredSlides: false,
         slideToClickedSlide: true,
         observer: true,
         observeParents: true,
