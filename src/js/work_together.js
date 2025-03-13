@@ -47,23 +47,36 @@ document.addEventListener('DOMContentLoaded', function () {
         throw new Error('Помилка відправки. Спробуйте ще раз.');
       }
 
-      modal.classList.add('is-open');
-      document.body.style.overflow = 'hidden';
+      openModal();
       form.reset();
     } catch (error) {
       alert(error.message);
     }
   });
 
-  closeModalBtn.addEventListener('click', function () {
+  function openModal() {
+    modal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    document.addEventListener('keydown', onEscKeyPress); 
+  }
+
+  function closeModal() {
     modal.classList.remove('is-open');
     document.body.style.overflow = '';
-  });
+    document.removeEventListener('keydown', onEscKeyPress); 
+  }
+
+  function onEscKeyPress(event) {
+    if (event.key === 'Escape') {
+      closeModal();
+    }
+  }
+
+  closeModalBtn.addEventListener('click', closeModal);
 
   modal.addEventListener('click', function (event) {
     if (event.target === modal) {
-      modal.classList.remove('is-open');
-      document.body.style.overflow = '';
+      closeModal();
     }
   });
 });
