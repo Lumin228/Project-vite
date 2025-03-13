@@ -208,7 +208,16 @@
   color: white;
   text-decoration: none;
   font-size: 20px;
+  /* text-decoration: underline; */
+  transition: color 0.3s ease;
+  pointer-events: auto;
 }
+/* .mobile-menu ul li a:hover {
+  color: #ed3b44 !important;
+}
+.mobile-menu ul li a:focus {
+  color: #ed3b44 !important;
+} */
 .close-menu {
   position: absolute;
   top: 20px;

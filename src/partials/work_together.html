@@ -1,6 +1,6 @@
 
     </div>
-    <form action="submit" class="footer-form">
+    <form action="submit" class="footer-form" novalidate>
       <input
         class="footer-input"
         type="email"
@@ -8,6 +8,7 @@
         pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
         id="email"
       />
+      <p id="emailStatusMessage" class="email-status-text"></p>
       <input
         class="footer-input"
         type="text"
