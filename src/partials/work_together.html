@@ -4,9 +4,19 @@
             <h2 class="footer-heading-text">Let’s <span class="footer-red-span">work</span> together</h2>
         </div>
         <form action="submit" class="footer-form">
-            <input class="footer-input" type="email" placeholder="clients@gmail.com"
-                pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" id="email">
-            <input class="footer-input" type="text" placeholder="comments" id="comment">
+
+            <label for="email" class="footer-input-label email-label">
+                <p class="dots"></p>
+                <input class="footer-input" type="email" placeholder="clients@gmail.com"
+                    pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" id="email">
+            </label>
+
+            <div class="email-status"></div>
+
+            <label for="email" class="footer-input-label comment-label">
+                <p class="dots"></p>
+                <input class="footer-input" type="text" placeholder="comments" id="comment">
+            </label>
             <button class="footer-btn" type="submit">Send</button>
         </form>
         <ul class="footer-contacts">

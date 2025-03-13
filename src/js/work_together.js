@@ -25,10 +25,30 @@ const refs = {
     emailInp: document.querySelector("#email"),
     commentInp: document.querySelector("#comment"),
     footerForm: document.querySelector(".footer-form"),
+    emailStatus: document.querySelector(".email-status"),
+    emailLabel: document.querySelector(".email-label"),
+    commentLabel: document.querySelector(".comment-label"),
 }
+
+function validateEmail(email) {
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailPattern.test(email);
+}
+refs.emailInp.addEventListener("change", (e) => {
+    if (validateEmail(e.target.value)) {
+        refs.emailStatus.classList.add("success");
+        refs.emailStatus.classList.remove("invalid");
+        refs.emailLabel.style.borderBottom = "1px solid #3cbc81";
+    }
+    else {
+        refs.emailStatus.classList.add("invalid");
+        refs.emailLabel.style.borderBottom = "1px solid #e74a3b";
+    }
+});
+refs.emailInp.addEventListener("input", (e) => { truncateText(e.target, refs.emailLabel) })
+refs.commentInp.addEventListener("input", (e) => { truncateText(e.target, refs.commentLabel) })
+
 refs.footerForm.addEventListener("submit", onFormSubmit);
-
-
 
 function onFormSubmit(event) {
     event.preventDefault();
@@ -47,14 +67,30 @@ function onFormSubmit(event) {
         });
     }
     else {
-        console.log(data);
+
         axios.post('https://portfolio-js.b.goit.study/api/requests', data);
         modalFooter.show();
         document.querySelector(".modal-close").addEventListener("click", (e) => {
             modalFooter.close();
+            refs.footerForm.reset();
         })
-        refs.footerForm.reset();
+
     };
 
+}
+
+function truncateText(input, label) {
+    // Визначаємо ширину input
+    const inputWidth = input.clientWidth; // Отримуємо ширину input в пікселях
+    const avgCharWidth = 7; // Середня ширина одного символу (можна підлаштувати)
+    // Розраховуємо максимальну кількість символів, які вміщуються в input
+    const maxLength = Math.floor(inputWidth / avgCharWidth);
+    let text = input.value;
+    if (text.length > maxLength) {
+        label.querySelector(".dots").textContent = "...";
+    }
+    else {
+        label.querySelector(".dots").textContent = " ";
+    }
 }
 
