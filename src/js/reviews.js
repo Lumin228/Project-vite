@@ -1,6 +1,6 @@
 import axios from 'axios';
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import iziToast from 'izitoast';
@@ -88,7 +88,9 @@ const swiper = new Swiper('.reviews-swiper', {
   slidesPerView: 1,
   spaceBetween: 16,
   autoHeight: false,
-  modules: [Navigation, Pagination],
+  simulateTouch: true,
+  slideToClickedSlide: true,
+  modules: [Navigation, Pagination, Keyboard],
   // Responsive breakpoints
   breakpoints: {
     // when window width is >= 768px
