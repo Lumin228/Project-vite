@@ -26,44 +26,31 @@ const refs = {
   emailInp: document.querySelector('#email'),
   commentInp: document.querySelector('#comment'),
   footerForm: document.querySelector('.footer-form'),
-  emailStatus: document.querySelector('#emailStatusMessage'),
+  emailStatus: document.querySelector('.email-status'),
   emailLabel: document.querySelector('.email-label'),
   commentLabel: document.querySelector('.comment-label'),
 };
 
-// function validateEmail(email) {
-//   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-//   return emailPattern.test(email);
-// }
-// refs.emailInp.addEventListener('change', e => {
-//   if (!emailPattern.test(email)) {
-//     refs.emailStatus.textContent = 'Invalid email, try again';
-//     refs.emailStatus.classList.remove('valid');
-//     refs.emailStatus.classList.add('invalid');
-//     refs.emailInp.style.borderColor = 'red';
-//     return;
-//   } else {
-//     refs.emailStatus.textContent = 'Success!';
-//     refs.emailStatus.classList.remove('invalid');
-//     refs.emailStatus.classList.add('valid');
-//     refs.emailInp.style.borderColor = 'green';
-//   }
-// });
-//   if (validateEmail(e.target.value)) {
-//     refs.emailStatus.classList.add('success');
-//     refs.emailStatus.classList.remove('invalid');
-//     refs.emailLabel.style.borderBottom = '1px solid #3cbc81';
-//   } else {
-//     refs.emailStatus.classList.add('invalid');
-//     refs.emailLabel.style.borderBottom = '1px solid #e74a3b';
-//   }
-// });
-// refs.emailInp.addEventListener('input', e => {
-//   truncateText(e.target, refs.emailLabel);
-// });
-// refs.commentInp.addEventListener('input', e => {
-//   truncateText(e.target, refs.commentLabel);
-// });
+function validateEmail(email) {
+  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return emailPattern.test(email);
+}
+refs.emailInp.addEventListener('change', e => {
+  if (validateEmail(e.target.value)) {
+    refs.emailStatus.classList.add('success');
+    refs.emailStatus.classList.remove('invalid');
+    refs.emailLabel.style.borderBottom = '1px solid #3cbc81';
+  } else {
+    refs.emailStatus.classList.add('invalid');
+    refs.emailLabel.style.borderBottom = '1px solid #e74a3b';
+  }
+});
+refs.emailInp.addEventListener('input', e => {
+  truncateText(e.target, refs.emailLabel);
+});
+refs.commentInp.addEventListener('input', e => {
+  truncateText(e.target, refs.commentLabel);
+});
 
 refs.footerForm.addEventListener('submit', onFormSubmit);
 
@@ -102,24 +89,24 @@ function onFormSubmit(event) {
   }
 }
 
-const emailInput = document.querySelector('#email');
-const message = document.createElement('p');
-message.style.color = 'red';
-emailInput.insertAdjacentElement('afterend', message);
+// const emailInput = document.querySelector('#email');
+// const message = document.createElement('p');
+// message.style.color = 'red';
+// emailInput.insertAdjacentElement('afterend', message);
 
-emailInput.addEventListener('input', () => {
-  const emailValue = emailInput.value.trim();
-  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+// emailInput.addEventListener('input', () => {
+//   const emailValue = emailInput.value.trim();
+//   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-  if (!emailPattern.test(emailValue)) {
-    message.textContent = 'Invalid email, try again';
-    emailInput.style.borderColor = 'red';
-  } else {
-    message.textContent = 'Success!';
-    message.style.color = 'green';
-    emailInput.style.borderColor = 'green';
-  }
-});
+//   if (!emailPattern.test(emailValue)) {
+//     message.textContent = 'Invalid email, try again';
+//     emailInput.style.borderColor = 'red';
+//   } else {
+//     message.textContent = 'Success!';
+//     message.style.color = 'green';
+//     emailInput.style.borderColor = 'green';
+//   }
+// });
 
 function truncateText(input, label) {
   // Визначаємо ширину input
