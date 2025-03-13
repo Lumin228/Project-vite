@@ -1,11 +1,3 @@
-.about-me{
-    font-family: "Inter Tight", sans-serif;
-    background-color: #1c1d20;
-    color: #fafafa;
-}
-button {
-    border: none;
-  }
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -23,8 +15,6 @@ button {
 .about-container {
     display: flex;
     gap: 16px;
-    align-items: center;
-    /* flex-wrap: wrap; */
     flex-direction: column;
 }
 
@@ -33,7 +23,6 @@ button {
     max-width: 343px;
     max-height: 500px;
     background-color: #242527;
-    
 }
 
 .about-text{
@@ -61,30 +50,22 @@ button {
 
 img{
     border-radius: 24px;
+    height: auto;
+    margin-bottom: 8px;
 }
 
-.accordion {
-    margin-top: 30px;
-}
+/* ACCORdeOn */
+
 
 .accordion-item {
-    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
     max-width: 343px;
-    padding-top: 20px;
-    padding-bottom: 44px;
+    background-color: #1c1d20 !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.2) !important;
+
 }
 
 .accordion-header {
-    /* width: 100%;
-    text-align: left;
-   
-    border: none;
-    color: white;
-    padding: 15px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: 0.3s; */
-
     font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
@@ -92,56 +73,169 @@ img{
     text-transform: uppercase;
     color: rgba(250, 250, 250, 0.4);
     background: transparent;
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 24px 0 32px 0!important;
 }
+.about-btn-acc::after{
+    display: none !important;
+
+}
+.about-btn-acc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgba(250, 250, 250, 0.2) !important;
+    padding: 10px !important;
+    width: 40px !important;
+    height: 40px !important;
+    transition: transform 0.3s ease, stroke 0.3s ease;
+    background-color: transparent;
+}
+.about-btn-acc:hover{
+    background-color: rgba(250, 250, 250, 0.2) !important;
+    transform: scale(1.2);
+}
+.acc-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transform: none;
+}
+.acc-icon svg {
+    transition: transform 0.3s ease;
+}
+
 
 .accordion-content {
     display: none;
-    padding-top: 12px;
-    padding-bottom: 20px;
- 
+
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: -0.02em;
     color: #fafafa;
 }
 
-.accordion-item.active .accordion-content {
+
+.about-me-text{
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    font-size: 16px;
+    color: #fafafa;
+    padding-bottom: 32px;
+}
+
+.about-me-role{
+    padding-bottom: 20px;
+}
+
+
+.accordion-container .ac-panel {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s ease-in-out;
+}
+.accordion-container .ac .ac-panel {
+    height: auto;
     display: block;
 }
 
-.skills-slider {
-    margin-top: 30px;
-}
+/* ----------------SWIPEEEEEEER------------ */
 
-.swiper {
-    width: 100%;
-    overflow: hidden;
-}
-
-.swiper-slide {
+#about-me-skills-slider {
+    margin-top: 96px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: flex-start;
+    position: relative;
 }
 
-.skill {
-    max-width: 200px;
-    max-height: 200px;
+#about-me-swiper {
+    width: 260px;
+    height:130px;
+    overflow: hidden;
+    margin-left: 0 !important;
+
+}
+
+#about-me-swiper-list{
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: transform 0.3s ease;
+    justify-content: flex-start !important;
+}
+
+.about-me-swiper-slide{
     border-radius: 100%;
-    background-color: #ed3b44;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    
     font-weight: 500;
-    font-size: 20px;
+    letter-spacing: -0.02em;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fafafa;
+    
+
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.red-skills {
+    background-color: #ed3b44;
+}
+
+.about-me-skill {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
     letter-spacing: -0.02em;
     color: #fafafa;
+    text-align: center;
 }
 
-/* .skill.active {
-    background: red;
-} */
+
+#about-me-swiper-next {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 999;
+    display: block !important; 
+}
+
+
+#about-me-swiper-next svg {
+    stroke: #3b3b3b;
+    fill: none;
+    transition: transform 0.3s ease, stroke 0.3s ease;
+}
+
+#about-me-swiper-next:hover svg {
+    stroke: white;
+    transform: scale(1.2);
+}
+
+.swiper-button-next, 
+.swiper-button-prev {
+    display: none !important;
+}
 
 
 
-  @media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     .about-text{
         font-size: 38px;
         line-height: 1.05;
@@ -151,18 +245,40 @@ img{
         padding-left: 64px;
     }
     .about-text-box{
-        max-width: 704px;
+        max-width: 704px; 
         max-height: 700px;
     }
     .accordion-item {
-        padding-top: 32px;
-        padding-bottom: 48px;
         max-width: 704px;
-    }
+        width: 100%;
     
-  }
-  
-  @media only screen and (min-width: 1440px) {
+    }
+    .accordion-header{
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+    .about-me-text{
+    }
+
+    .about-me-swiper-slide{
+        width: 200px;
+        height: 200px;
+    }
+    .about-icon-swiper{
+        width: 40px;
+        height: 40px;
+
+    }
+    #about-me-swiper {
+        width: 600px;
+        height:200px;
+    }
+    .about-me-skill {
+        font-size: 20px;
+    }
+
+}
+@media only screen and (min-width: 1440px) {
     .about-text-box {
         max-width: 680px;
     }
@@ -175,15 +291,10 @@ img{
     }
 
     .accordion-content {
-        display: none;
-        padding-top: 12px;
-        padding-bottom: 20px;
         padding-left: 696px;
         text-align: left;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: -0.02em;
-        color: #fafafa;
-
     }
-  }
+    #about-me-swiper {
+        width: 1200px;
+    }
+}

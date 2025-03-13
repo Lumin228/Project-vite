@@ -54,8 +54,7 @@
   margin-bottom: 32px;
 }
 
-.footer-lable {
-}
+
 
 .footer-input {
   max-width: 343px;
@@ -198,6 +197,7 @@ input:focus {
 
 .modal {
   max-width: 343px;
+  width: 343px;
   border: 1px solid rgba(250, 250, 250, 0.1);
   border-radius: 20px;
   padding: 64px 32px;
@@ -366,11 +366,13 @@ input:focus {
   .success {
     border-bottom: 1px solid #3cbc81 !important;
     min-width: 394px;
+    min-width: 390px;
   }
 
   .error {
     border-bottom: 1px solid #e74a3b !important;
     min-width: 394px;
+    min-width: 390px;
   }
 
   .footer-form {
