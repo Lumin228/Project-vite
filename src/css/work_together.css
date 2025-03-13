@@ -36,12 +36,18 @@
     flex-direction: column;
     gap: 16px;
     margin-bottom: 64px;
+    position: relative;
 }
+
+.footer-input-label {
+    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+    position: relative;
+}
+
 
 .footer-input {
     outline: none;
     border: none;
-    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
     background: transparent;
     font-family: "Inter Tight", sans-serif;
     font-weight: 500;
@@ -52,13 +58,51 @@
     padding: 0;
     padding-bottom: 20px;
     height: 40px;
+    width: 100%;
+}
+
+.footer-input:hover,
+.footer-input:focus-within {
+    color: #fafafa;
+}
+
+.footer-input-label:hover,
+.footer-input-label:focus-within {
+    border-bottom: 1px solid rgba(250, 250, 250, 0.5);
+    color: #fafafa;
 }
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
-    -webkit-text-fill-color: rgba(250, 250, 250, 0.6);
+    -webkit-text-fill-color: #fafafa;
     -webkit-box-shadow: 0 0 0px 40rem #1c1d20 inset;
+
+}
+
+.success::after {
+    content: "Success!";
+    position: absolute;
+    top: 44px;
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: -0.02em;
+    color: #3cbc81;
+}
+
+
+.invalid::after {
+    content: "Invalid email, try again";
+    position: absolute;
+    top: 44px;
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: -0.02em;
+    color: #e74a3b;
 
 }
 
@@ -100,6 +144,14 @@ input:-webkit-autofill:focus {
     padding: 10px 12px;
 }
 
+.footer-contacts-item:hover {
+    border: 1px solid #fafafa;
+}
+
+.dots {
+    position: absolute;
+    background-color: #1c1d20;
+}
 
 
 /*==============================Media================================== */
@@ -135,12 +187,12 @@ input:-webkit-autofill:focus {
         align-items: center;
     }
 
-    .footer-input {
+    .footer-input-label {
 
         width: calc((100% - 64px - 150px)/2);
     }
 
-    .footer-form>input:last-of-type {
+    .footer-form>.footer-input-label:last-of-type {
         margin-bottom: 0px;
     }
 
@@ -156,6 +208,17 @@ input:-webkit-autofill:focus {
     .footer-contacts-item {
         font-size: 16px;
         padding: 18px 32px;
+    }
+
+    /**for label.email-label***/
+    .success::after {
+        left: 0;
+        top: 98px;
+    }
+
+    .invalid::after {
+        left: 0;
+        top: 98px;
     }
 }
 
@@ -182,11 +245,11 @@ input:-webkit-autofill:focus {
         }
     }
 
-    .footer-input {
+    .footer-input-label {
         width: calc((100% - 32px - 86px - 150px)/2);
     }
 
-    .footer-form>input:last-of-type {
+    .footer-form>.footer-input-label:last-of-type {
         margin-bottom: 0px;
         margin-right: calc(86px - 32px);
     }
