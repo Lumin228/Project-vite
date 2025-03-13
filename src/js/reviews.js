@@ -3,6 +3,8 @@ import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 const reviewRefs = {
   container: document.querySelector('.js-reviews-list'),
@@ -47,19 +49,45 @@ function renderReviews(reviews) {
   const markup = reviewSTemplate(reviews);
   reviewRefs.container.insertAdjacentHTML('beforeend', markup);
 }
+function renderNotFound() {
+  reviewRefs.container.innerHTML = `<p class="reviews-notfound">Not found</p>`;
+}
 
 getReviews()
   .then(({ reviews }) => {
     renderReviews(reviews);
     console.log(reviews);
   })
-  .catch(error => console.error('Handled error', error));
+  .catch(error => {
+    renderNotFound();
+    const revievFailed = function (entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          iziToast.error({
+            title: 'Error',
+            message: `Failed to load reviews. Please try again later.`,
+            position: 'topCenter',
+            closeOnClick: true,
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(revievFailed, {
+      root: null,
+      threshold: 0.1,
+    });
+
+    observer.observe(reviewRefs.container);
+  });
 
 // !=====================================================
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.reviews-swiper', {
   slidesPerView: 1,
   spaceBetween: 16,
+  autoHeight: false,
   modules: [Navigation, Pagination],
   // Responsive breakpoints
   breakpoints: {
@@ -75,10 +103,17 @@ const swiper = new Swiper('.swiper', {
     },
   },
   navigation: {
-    nextEl: '.swiper-btn-next',
-    prevEl: '.swiper-btn-prev',
+    nextEl: '.reviews-swiper-next',
+    prevEl: '.reviews-swiper-prev',
   },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+  mousewheel: {
+    invert: false,
+  },
+  grabCursor: true,
 });
-const swiperr = document.querySelector('.swiper').swiper;
 
-swiperr.slideNext();
+swiper.slideNext();
