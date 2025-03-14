@@ -120,6 +120,7 @@
 
 .swiper-button-disabled svg {
   stroke: rgba(250, 250, 250, 0.2);
+  cursor: auto;
 }
 
 .reviews-notfound {
