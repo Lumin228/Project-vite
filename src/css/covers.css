@@ -67,7 +67,18 @@ body {
   width: 544px;
   height: 314px;
   object-fit: cover;
+  /* object-fit: fill; */
+  object-position: center;
   margin-right: 20px;
+  border-radius: 0px;
+  /* height: auto; */
+  margin-bottom: 0px;
+  overflow: hidden;
+  background-size: cover;
+  background: #1c1d20;
+  /* box-shadow: 0 0 2px 1c1d20; */
+  /* background-color: black; */
+  /* transform: scale(1.01); */
 }
 
 @media (max-width: 768px) {
@@ -112,9 +123,10 @@ body {
 
 .marquee {
   position: absolute;
-  left: 0;
+  left: -40;
   right: 0;
-  top: 0;
+  top: -20;
+  top: -80;
   bottom: 0;
   overflow: hidden;
   display: flex;

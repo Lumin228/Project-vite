@@ -130,7 +130,7 @@
   display: none;
   width: 150px;
   padding: 10px 0;
-  transform: translate(-40px);
+  transform: translate(-49px);
 }
 
 .header__menu {
@@ -138,7 +138,6 @@
   padding: 0;
   margin: 0;
   text-align: center;
-
 }
 
 .header__menu li {
@@ -186,10 +185,12 @@
   width: 100%;
   height: 100vh;
   /* background: rgba(0, 0, 0, 0.9); */
-  background: linear-gradient(270deg,
-      #1c1d20 49.68%,
-      #69292d 67.73%,
-      #ed3b44 100%);
+  background: linear-gradient(
+    270deg,
+    #1c1d20 49.68%,
+    #69292d 67.73%,
+    #ed3b44 100%
+  );
   color: white;
   display: flex;
   flex-direction: column;
@@ -208,10 +209,12 @@
   width: 50%;
   /* Полосатый градиент только на левой половине */
   height: 100%;
-  background: repeating-linear-gradient(to right,
-      rgba(0, 0, 0, 0.2) 1%,
-      rgba(0, 0, 0, 0.1) 1%,
-      rgba(0, 0, 0, 0) 12%);
+  background: repeating-linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.2) 1%,
+    rgba(0, 0, 0, 0.1) 1%,
+    rgba(0, 0, 0, 0) 12%
+  );
 }
 
 .mobile-menu.active {
