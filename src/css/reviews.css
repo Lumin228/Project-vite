@@ -90,6 +90,28 @@
 .reviews-swiper .swiper-slide {
   height: 305px !important;
   overflow: auto;
+  scrollbar-color: #585656 #807979;
+  scrollbar-width: thin;
+}
+/* .reviews-swiper .swiper-slide::-webkit-scrollbar {
+  display: none;
+} */
+.reviews-swiper .swiper-slide::-webkit-scrollbar {
+  width: 6px;
+}
+
+.reviews-swiper .swiper-slide::-webkit-scrollbar-track {
+  background: #585656;
+  border-radius: 5px;
+}
+
+.reviews-swiper .swiper-slide::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+
+.reviews-swiper .swiper-slide::-webkit-scrollbar-thumb:hover {
+  background: #585656;
 }
 .reviews-arrows-btn-wrapper > .swiper-button-disabled {
   border: 1px solid rgba(250, 250, 250, 0.2);
