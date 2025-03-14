@@ -20,6 +20,7 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 .content {
   position: relative;
   z-index: 1;
@@ -43,7 +44,7 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .marquee__inner {
@@ -100,6 +101,7 @@ body {
   from {
     transform: translateX(-20%);
   }
+
   to {
     transform: translateX(-180%);
   }
