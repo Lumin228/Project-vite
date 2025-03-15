@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     try {
       const response = await fetch(
-        'https://jsonplaceholder.typicode.com/posts',
+        'https://jsonplaceholder.typicode.com/posts-щт',
         {
           method: 'POST',
           headers: {
@@ -44,11 +44,15 @@ document.addEventListener('DOMContentLoaded', function () {
       );
 
       if (!response.ok) {
-        throw new Error('Помилка відправки. Спробуйте ще раз.');
+        throw new Error('Sending error. Please try again.');
       }
 
       openModal();
       form.reset();
+      message.textContent = '';
+      checkStatus.classList.remove('success', 'error');
+      footerEmail.classList.remove('success', 'error');
+      message.classList.remove('success-message', 'error-message');
     } catch (error) {
       alert(error.message);
     }
@@ -57,13 +61,13 @@ document.addEventListener('DOMContentLoaded', function () {
   function openModal() {
     modal.classList.add('is-open');
     document.body.style.overflow = 'hidden';
-    document.addEventListener('keydown', onEscKeyPress); 
+    document.addEventListener('keydown', onEscKeyPress);
   }
 
   function closeModal() {
     modal.classList.remove('is-open');
     document.body.style.overflow = '';
-    document.removeEventListener('keydown', onEscKeyPress); 
+    document.removeEventListener('keydown', onEscKeyPress);
   }
 
   function onEscKeyPress(event) {
