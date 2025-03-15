@@ -4,7 +4,43 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 1px solid red;
 }
+
+.footer-heading-text {
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #fafafa;
+    background-image: url(../img/work-together/photo-1-mob.png);
+    background-repeat: no-repeat;
+    text-indent: 52px;
+    background-size: 44px 44px;
+    max-width: 267px;
+
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .footer-heading-text {
+        background: url(../img/work-together/photo-1-mob@2x.png);
+        background-repeat: no-repeat;
+        background-size: 44px 44px;
+    }
+}
+
+.footer-red-span {
+    color: #ed3b44;
+}
+
+.footer-heading {
+    margin-bottom: 63px;
+}
+
+
 
 .footer>.container {}
 
