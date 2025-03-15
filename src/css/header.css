@@ -273,6 +273,10 @@
   margin-top: 289px;
 }
 
+.btn-order-menu:hover {
+  color: #e0373f;
+}
+
 /* adaptivity */
 @media (min-width: 768px) {
   .header__nav {
