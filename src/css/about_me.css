@@ -222,11 +222,12 @@ img {
 
 @media only screen and (min-width: 768px) {
   .about-text {
+    width: 704px;
+    height: 700px;
     font-size: 38px;
     line-height: 1.05;
     padding-top: 64px;
     padding-right: 64px;
-    padding-bottom: 436px;
     padding-left: 64px;
   }
   .about-text-box {
@@ -261,6 +262,10 @@ img {
   }
 }
 @media only screen and (min-width: 1440px) {
+  .about-text {
+    width: 680px;
+    height: 700px;
+  }
   .about-text-box {
     max-width: 680px;
   }
