@@ -91,6 +91,7 @@
 .header__logo img {
   width: 50px;
   margin-right: 10px;
+  border-radius: 18px;
 }
 
 .header__order {
@@ -107,6 +108,9 @@
   padding: 14px 32px;
   background: #ed3b44;
   font-family: 'Inter Tight', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Menu */
