@@ -21,14 +21,20 @@ document.addEventListener('DOMContentLoaded', function () {
   const form = document.querySelector('.footer-form');
   const modal = document.querySelector('.backdrop');
   const closeModalBtn = document.querySelector('.modal-close');
+  const textInput = document.querySelector('#text');
 
   form.addEventListener('submit', async function (event) {
     event.preventDefault();
 
+    if (textInput.value.trim() === '') {
+      alert('Please enter a valid message. Spaces are not allowed.');
+      return;
+    }
+
     const formData = new FormData(form);
     const data = {
       email: formData.get('email'),
-      message: formData.get('text'),
+      message: formData.get('text').trim(), 
     };
 
     try {
@@ -49,10 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
       openModal();
       form.reset();
-      message.textContent = '';
-      checkStatus.classList.remove('success', 'error');
-      footerEmail.classList.remove('success', 'error');
-      message.classList.remove('success-message', 'error-message');
     } catch (error) {
       alert(error.message);
     }
