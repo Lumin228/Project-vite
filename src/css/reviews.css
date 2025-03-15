@@ -92,17 +92,20 @@
   overflow: auto;
   scrollbar-color: #585656 #807979;
   scrollbar-width: thin;
+  -ms-overflow-style: none;
 }
+
 /* .reviews-swiper .swiper-slide::-webkit-scrollbar {
   display: none;
 } */
 .reviews-swiper .swiper-slide::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
+  height: 4px;
+  display: block;
 }
 
 .reviews-swiper .swiper-slide::-webkit-scrollbar-track {
-  background: #585656;
-  border-radius: 5px;
+  background: transparent;
 }
 
 .reviews-swiper .swiper-slide::-webkit-scrollbar-thumb {
