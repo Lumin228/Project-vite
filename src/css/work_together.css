@@ -1,5 +1,4 @@
 .footer {
-    margin-top: 32px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,33 +42,7 @@
 
 .footer>.container {}
 
-.footer-title {
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 100%;
-    letter-spacing: -0.03em;
-    color: #fafafa;
-    max-width: 226px;
-}
 
-.footer-span {
-    color: #ed3b44;
-}
-
-.together {
-    margin-bottom: 63px;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 100%;
-    letter-spacing: -0.03em;
-    color: #fafafa;
-    max-width: 207px;
-}
-
-.logo-container {
-    display: flex;
-    gap: 8px;
-}
 
 .footer-icon {
     border-radius: 12px;
@@ -87,6 +60,7 @@
 
 .form-container {
     margin-bottom: 64px;
+
 }
 
 .footer-form {
@@ -293,23 +267,36 @@ input:focus {
 
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
-    .container {
+    .footer>.container {
         max-width: 768px;
         padding: 48px 32px;
     }
 
-    .footer {
-        margin-top: 88px;
-        margin-bottom: 121px;
+    .footer {}
+
+    .footer-heading-text {
+        line-height: 70px;
+        font-size: 64px;
+        background-image: url(../img/work-together/photo-1-tab.png);
+        background-repeat: no-repeat;
+        text-indent: 90px;
+        background-size: 70px 70px;
+        max-width: 532px;
     }
 
-    .footer-title {
-        font-weight: 500;
-        font-size: 64px;
-        line-height: 100%;
-        letter-spacing: -0.03em;
-        max-width: 442px;
+    @media (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+        .footer-heading-text {
+            background: url(../img/work-together/photo-1-tab@2x.png);
+            background-repeat: no-repeat;
+            background-size: 70px 70px;
+        }
     }
+
+    .footer-heading {
+        margin-bottom: 18px;
+    }
+
 
     .together {
         margin-bottom: 18px;
@@ -393,14 +380,29 @@ input:focus {
 
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1440px) {
-    .container {
+    .footer>.container {
         max-width: 1440px;
         padding: 82px 32px;
     }
 
-    .form-container {
-        gap: 86px;
+    .footer-heading-text {
+        background-image: url(../img/work-together/photo-1-desk.png);
+        background-repeat: no-repeat;
+        text-indent: 90px;
+        background-size: 70px 70px;
+        max-width: 532px;
     }
+
+    @media (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+        .footer-heading-text {
+            background: url(../img/work-together/photo-1-desk@2x.png);
+            background-repeat: no-repeat;
+            background-size: 70px 70px;
+        }
+    }
+
+    .form-container {}
 
     .success {
         border-bottom: 1px solid #3cbc81 !important;
