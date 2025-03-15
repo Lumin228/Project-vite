@@ -90,7 +90,7 @@
 .reviews-swiper .swiper-slide {
   height: 305px !important;
   overflow: auto;
-  scrollbar-color: #585656 #807979;
+  scrollbar-color: #585656 transparent;
   scrollbar-width: thin;
   -ms-overflow-style: none;
 }
