@@ -1,17 +1,25 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const questions = document.querySelectorAll('.question-title');
+import Accordion from 'accordion-js';
+import 'accordion-js/dist/accordion.min.css';
 
-  questions.forEach(question => {
-    question.addEventListener('click', function () {
-      const parentItem = this.parentElement;
-
-      document.querySelectorAll('.question-list-item').forEach(item => {
-        if (item !== parentItem) {
-          item.classList.remove('active');
+document.addEventListener("DOMContentLoaded", function () {
+    const accordion = new Accordion('.faq-list', {
+        duration: 500,
+        showMultiple: false,
+        elementClass: 'faq-item',
+        triggerClass: 'faq-box-question',
+        panelClass: 'faq-box-answer',
+        activeClass: 'active',
+        beforeOpen: function (element) {
+            const btn = element.querySelector('.faq-btn .arrow-faq');
+            if (btn) btn.style.transform = 'rotate(180deg)';
+        },
+        beforeClose: function (element) {
+            const btn = element.querySelector('.faq-btn .arrow-faq');
+            if (btn) btn.style.transform = 'rotate(0deg)';
         }
-      });
-
-      parentItem.classList.toggle('active');
     });
-  });
 });
+
+
+
+
