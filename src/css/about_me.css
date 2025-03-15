@@ -20,8 +20,8 @@
 
 .about-text-box {
   border-radius: 24px;
-  max-width: 343px;
-  max-height: 500px;
+  width: 343px;
+  height: 500px;
   background-color: #242527;
 }
 
@@ -32,10 +32,7 @@
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #fafafa;
-  padding-top: 32px;
-  padding-right: 32px;
-  padding-bottom: 272px;
-  padding-left: 32px;
+  padding: 32px;
 }
 
 .about-text .highlight {
@@ -119,11 +116,17 @@ img {
   letter-spacing: -0.02em;
   font-size: 16px;
   color: #fafafa;
-  padding-bottom: 32px;
+  margin-bottom: 32px;
+}
+.about-me-text:last-child {
+  margin-bottom: 32px;
 }
 
 .about-me-role {
-  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.about-me-role:last-child {
+  margin-bottom: 20px;
 }
 
 .accordion-container .ac-panel {
@@ -222,17 +225,13 @@ img {
 
 @media only screen and (min-width: 768px) {
   .about-text {
-    width: 704px;
-    height: 700px;
     font-size: 38px;
     line-height: 1.05;
-    padding-top: 64px;
-    padding-right: 64px;
-    padding-left: 64px;
+    padding: 64px;
   }
   .about-text-box {
-    max-width: 704px;
-    max-height: 700px;
+    width: 704px;
+    height: 700px;
   }
   .accordion-item {
     max-width: 704px;
@@ -242,8 +241,6 @@ img {
     padding-top: 32px;
     padding-bottom: 32px;
   }
-  /* .about-me-text {
-  } */
 
   .about-me-swiper-slide {
     width: 200px;
@@ -262,12 +259,9 @@ img {
   }
 }
 @media only screen and (min-width: 1440px) {
-  .about-text {
+  .about-text-box {
     width: 680px;
     height: 700px;
-  }
-  .about-text-box {
-    max-width: 680px;
   }
   .about-container {
     flex-direction: row;
