@@ -156,6 +156,17 @@ img {
   margin-left: 0 !important;
 }
 
+/* vk */
+@media (min-width: 320px) and (max-width: 375px) {
+  #about-me-swiper {
+    width: 130px;
+  }
+  .about-text-box {
+    max-width: 343px;
+  }
+}
+/* vk  */
+
 #about-me-swiper-list {
   padding: 0 !important;
   margin: 0 !important;
