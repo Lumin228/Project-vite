@@ -117,6 +117,7 @@
 .header__menu-wrapper {
   position: relative;
   display: inline-block;
+
 }
 
 .menu-btn {
@@ -131,13 +132,14 @@
 .header__nav {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 50%;
+  margin-right: -50%;
+  transform: translateX(-50%);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   display: none;
   width: 150px;
   padding: 10px 0;
-  transform: translate(-49px);
 }
 
 .header__menu {
@@ -190,7 +192,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   /* background: rgba(0, 0, 0, 0.9); */
   background: linear-gradient(270deg,
       #1c1d20 49.68%,
@@ -204,7 +206,13 @@
   transform: translateY(-100%);
   transition: transform 0.3s ease-in-out;
   z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
 }
+
 
 .mobile-menu::before {
   content: '';
@@ -257,6 +265,7 @@
   font-size: 30px;
   color: white;
   cursor: pointer;
+
 }
 
 .btn-order-menu {
@@ -270,7 +279,7 @@
   letter-spacing: -0.02em;
   color: #fafafa;
   z-index: 1000;
-  margin-top: 289px;
+  /* margin-top: 289px; */
 }
 
 .btn-order-menu:hover {
