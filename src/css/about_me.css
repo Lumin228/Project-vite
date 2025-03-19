@@ -23,6 +23,7 @@
   max-width: 343px;
   height: 500px;
   background-color: #242527;
+  padding: 32px;
 }
 
 .about-text {
@@ -32,7 +33,6 @@
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #fafafa;
-  padding: 32px;
 }
 
 .about-text .highlight {
@@ -238,11 +238,11 @@ img {
   .about-text {
     font-size: 38px;
     line-height: 1.05;
-    padding: 64px;
   }
   .about-text-box {
     width: 704px;
     height: 700px;
+    padding: 64px;
   }
   .accordion-item {
     max-width: 704px;
