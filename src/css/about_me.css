@@ -20,7 +20,7 @@
 
 .about-text-box {
   border-radius: 24px;
-  width: 343px;
+  max-width: 343px;
   height: 500px;
   background-color: #242527;
 }
@@ -161,9 +161,9 @@ img {
   #about-me-swiper {
     width: 130px;
   }
-  .about-text-box {
+  /* .about-text-box {
     max-width: 343px;
-  }
+  } */
 }
 /* vk  */
 
