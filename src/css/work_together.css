@@ -39,6 +39,7 @@
 
 .footer>.container {
   padding-top: 64px;
+  padding-bottom: 32px;
 }
 
 
@@ -380,7 +381,7 @@ input:focus {
 @media only screen and (min-width: 1440px) {
   .footer>.container {
     max-width: 1440px;
-    padding: 82px 32px 0 32px;
+    padding: 82px 32px 169px 32px;
   }
 
   .footer-heading-text {
