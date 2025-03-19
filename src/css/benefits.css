@@ -21,7 +21,7 @@
 .benefits-card {
   border-radius: 20px;
   padding: 24px;
-  width: 344px;
+  max-width: 344px;
   height: 270px;
   background: #242527;
   padding: 24px;
