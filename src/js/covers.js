@@ -48,57 +48,76 @@ import imgFirstScreen1_x2 from '../img/covers/first_screen_1_x2.jpg';
 import imgFirstScreen1_m_x2 from '../img/covers/first_screen_1_m_x2.jpg';
 import imgFirstScreen1_m from '../img/covers/first_screen_1_m.jpg';
 
-// РњР°СЃСЃРёРІ Р·РѕР±СЂР°Р¶РµРЅСЊ
 const images = [
-  imgRectangle12,
-  imgRectangle12_x2,
-  imgRectangle12_m_x2,
-  imgRectangle12_m,
-  imgRectangle11,
-  imgRectangle11_x2,
-  imgRectangle11_m_x2,
-  imgRectangle11_m,
-  imgRectangle10,
-  imgRectangle10_x2,
-  imgRectangle10_m_x2,
-  imgRectangle10_m,
-  imgRectangle9,
-  imgRectangle9_x2,
-  imgRectangle9_m_x2,
-  imgRectangle9_m,
-  imgRectangle8,
-  imgRectangle8_x2,
-  imgRectangle8_m_x2,
-  imgRectangle8_m,
-  imgRectangle7,
-  imgRectangle7_x2,
-  imgRectangle7_m_x2,
-  imgRectangle7_m,
-  imgRectangle6,
-  imgRectangle6_x2,
-  imgRectangle6_m_x2,
-  imgRectangle6_m,
-  imgRectangle5,
-  imgRectangle5_x2,
-  imgRectangle5_m_x2,
-  imgRectangle5_m,
-  imgRectangle4,
-  imgRectangle4_x2,
-  imgRectangle4_m_x2,
-  imgRectangle4_m,
-  imgFirstScreen1,
-  imgFirstScreen1_x2,
-  imgFirstScreen1_m_x2,
-  imgFirstScreen1_m,
+  {
+    default: imgRectangle12,
+    x2: imgRectangle12_x2,
+    m_x2: imgRectangle12_m_x2,
+    m: imgRectangle12_m,
+  },
+  {
+    default: imgRectangle11,
+    x2: imgRectangle11_x2,
+    m_x2: imgRectangle11_m_x2,
+    m: imgRectangle11_m,
+  },
+  {
+    default: imgRectangle10,
+    x2: imgRectangle10_x2,
+    m_x2: imgRectangle10_m_x2,
+    m: imgRectangle10_m,
+  },
+  {
+    default: imgRectangle9,
+    x2: imgRectangle9_x2,
+    m_x2: imgRectangle9_m_x2,
+    m: imgRectangle9_m,
+  },
+  {
+    default: imgRectangle8,
+    x2: imgRectangle8_x2,
+    m_x2: imgRectangle8_m_x2,
+    m: imgRectangle8_m,
+  },
+  {
+    default: imgRectangle7,
+    x2: imgRectangle7_x2,
+    m_x2: imgRectangle7_m_x2,
+    m: imgRectangle7_m,
+  },
+  {
+    default: imgRectangle6,
+    x2: imgRectangle6_x2,
+    m_x2: imgRectangle6_m_x2,
+    m: imgRectangle6_m,
+  },
+  {
+    default: imgRectangle5,
+    x2: imgRectangle5_x2,
+    m_x2: imgRectangle5_m_x2,
+    m: imgRectangle5_m,
+  },
+  {
+    default: imgRectangle4,
+    x2: imgRectangle4_x2,
+    m_x2: imgRectangle4_m_x2,
+    m: imgRectangle4_m,
+  },
+  {
+    default: imgFirstScreen1,
+    x2: imgFirstScreen1_x2,
+    m_x2: imgFirstScreen1_m_x2,
+    m: imgFirstScreen1_m,
+  },
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
   const marqueeContainers = document.querySelectorAll('.marquee__inner');
 
   function getImageType() {
-    if (window.innerWidth <= 480) return '_m';
-    if (window.innerWidth <= 768) return '_m_x2';
-    return '_x2';
+    if (window.innerWidth <= 480) return 'm';
+    if (window.innerWidth <= 768) return 'm_x2';
+    return 'x2';
   }
 
   function populateMarquee() {
@@ -106,9 +125,10 @@ document.addEventListener('DOMContentLoaded', () => {
       container.innerHTML = '';
       const shuffledImages = [...images].sort(() => Math.random() - 0.5);
 
-      shuffledImages.forEach(img => {
-        const type = getImageType();
-        const imgPath = img;
+      const type = getImageType();
+
+      shuffledImages.forEach(imgObj => {
+        const imgPath = imgObj[type] || imgObj.default;
 
         const imageElement = document.createElement('img');
         imageElement.classList.add('marquee__line');
