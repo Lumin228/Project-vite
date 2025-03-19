@@ -427,3 +427,37 @@ input:focus {
     max-width: 422px;
   }
 }
+
+/* vk */
+@media (min-width: 320px) and (max-width: 375px) {
+  .footer {
+    background-image: image-set(
+      url('../img/work-together/footer-bg-m.png') 1x,
+      url('../img/work-together/footer-bg-m-2x.png') 2x
+    );
+  }
+  .footer-list {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .footer {
+    background-image: image-set(
+      url('../img/work-together/footer-bg-2x.png') 1x,
+      url('../img/work-together/footer-bg--t-2x.png') 2x
+    );
+  }
+  /* .footer-list {
+    flex-wrap: wrap;
+  } */
+}
+
+@media only screen and (min-width: 1440px) {
+  .footer {
+    background-image: image-set(
+      url('../img/work-together/footer-bg.png') 1x,
+      url('../img/work-together/footer-bg-2x.png') 2x
+    );
+  }
+}
+/* vk  */
