@@ -219,13 +219,16 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 50%;
+  width: 100%;
   /* Полосатый градиент только на левой половине */
   height: 100%;
   background: repeating-linear-gradient(to right,
-      rgba(0, 0, 0, 0.2) 1%,
-      rgba(0, 0, 0, 0.1) 1%,
-      rgba(0, 0, 0, 0) 12%);
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.2) 1px,
+      rgba(0, 0, 0, 0.3) 11px,
+      rgba(0, 0, 0, 0.3) 11px,
+      rgba(0, 0, 0, 0.3) 12px,
+      rgba(0, 0, 0, 0.1) 57px);
 }
 
 .mobile-menu.active {

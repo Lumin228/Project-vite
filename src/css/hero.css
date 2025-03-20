@@ -17,7 +17,13 @@
 }
 
 .hero::before {
-  background: repeating-linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2) 1px, rgba(0, 0, 0, 0.3) 11px, rgba(0, 0, 0, 0.3) 11px, rgba(0, 0, 0, 0.3) 12px, rgba(0, 0, 0, 0.1) 72px);
+  background: repeating-linear-gradient(to right,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.2) 1px,
+      rgba(0, 0, 0, 0.3) 11px,
+      rgba(0, 0, 0, 0.3) 11px,
+      rgba(0, 0, 0, 0.3) 12px,
+      rgba(0, 0, 0, 0.1) 57px);
 }
 
 .hero::before {
